@@ -1,0 +1,19 @@
+export enum StateAbbreviationType {
+  DE,
+  BW,
+  BY,
+  BB,
+  BE,
+  HB,
+  HH,
+  HE,
+  MV,
+  NI,
+  NW,
+  RP,
+  SL,
+  ST,
+  SN,
+  SH,
+  TH
+}

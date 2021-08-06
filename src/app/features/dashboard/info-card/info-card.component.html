@@ -1,0 +1,25 @@
+<mat-card class="card-container card mat-elevation-z4">
+
+  <div class="header-container">
+    <span class="title">{{model.title}}</span>
+
+    <div class="search">
+      <button mat-button
+              class="rounded-button"
+              [matMenuTriggerFor]="tr">
+        <span>{{selectedTimeRange?.name}}</span>
+      </button>
+      <mat-menu #tr="matMenu">
+        <button *ngFor="let timeRange of timeRanges" mat-menu-item
+                (click)="applyTimeRange(timeRange)">{{timeRange.name}}</button>
+      </mat-menu>
+    </div>
+
+  </div>
+
+  <span class="value">{{model.value | number}}</span>
+  <div class="chart-container">
+    <cs-info-chart *ngIf=chartModel [chartModel]="chartModel"></cs-info-chart>
+  </div>
+
+</mat-card>

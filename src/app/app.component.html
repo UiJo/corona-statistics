@@ -1,0 +1,24 @@
+<div class="app-container">
+
+  <header>
+    <mat-toolbar color="primary">
+      <span>{{title}}</span>
+      <span class="toolbar-spacer"></span>
+
+      <button mat-icon-button aria-label="change theme" (click)="toggleTheme()">
+        <mat-icon>brightness_4</mat-icon>
+      </button>
+
+      <button mat-icon-button aria-label="git hub" (click)="redirectToGitHub()">
+        <mat-icon>info</mat-icon>
+      </button>
+
+    </mat-toolbar>
+
+  </header>
+
+  <main class="mat-app-background">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>

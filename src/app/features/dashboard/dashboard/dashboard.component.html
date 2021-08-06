@@ -1,0 +1,22 @@
+<div class="dashboard-container">
+
+  <div class="search-container">
+    <button mat-flat-button color="primary" class="rounded-button" [matMenuTriggerFor]="ss">
+      <span>{{selectedState.name}}</span>
+    </button>
+    <mat-menu #ss="matMenu">
+      <button *ngFor="let state of states" mat-menu-item
+              (click)="applyStateChanged(state)">{{state.name}}</button>
+    </mat-menu>
+  </div>
+
+  <div class="cards-container">
+    <cs-info-card [model]="cardCases"></cs-info-card>
+    <cs-info-card [model]="cardDeaths"></cs-info-card>
+    <cs-info-card [model]="cardRecovered"></cs-info-card>
+    <cs-info-card-simple [model]="cardWeekIncidence"></cs-info-card-simple>
+    <cs-info-card-simple [model]="cardCasesPerWeek"></cs-info-card-simple>
+    <cs-info-card-simple [model]="cardCasesPer100K"></cs-info-card-simple>
+  </div>
+
+</div>

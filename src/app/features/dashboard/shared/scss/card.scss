@@ -1,0 +1,21 @@
+.card {
+  min-height: 200px;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0;
+
+  .header-container {
+    padding: 20px;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+
+  .value {
+    padding-left: 20px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,9 @@
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px auto;
+}
+
+.header {
+  align-self: center;
+}
