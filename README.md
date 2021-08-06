@@ -1,5 +1,7 @@
 # Dashboard for Corona Statistics in  Germany
 
+[Demo](https://statistics-corona.netlify.app/)
+
 Tech stack:
 
 * Angular
