@@ -1,0 +1,26 @@
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr auto;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 10px;
+  align-items: center;
+}
+
+.search {
+  justify-self: end;
+}
+
+.chart-container {
+  height: 80px;
+}
+
+.rounded-button {
+  background-color: #94a3b81f;
+  border-radius: 100px;
+}
+

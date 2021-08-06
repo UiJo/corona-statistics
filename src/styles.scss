@@ -1,0 +1,46 @@
+@use '~@angular/material' as mat;
+
+@include mat.core();
+
+
+$corona-statistics-primary: mat.define-palette(mat.$light-blue-palette, 800);
+$corona-statistics-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$corona-statistics-warn: mat.define-palette(mat.$red-palette);
+
+
+$corona-statistics-theme: mat.define-light-theme((
+  color: (
+    primary: $corona-statistics-primary,
+    accent: $corona-statistics-accent,
+    warn: $corona-statistics-warn,
+  )
+));
+
+@include mat.all-component-themes($corona-statistics-theme);
+
+$dark-primary: mat.define-palette(mat.$grey-palette, 700);
+$dark-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$dark-warn: mat.define-palette(mat.$red-palette);
+
+$corona-statistics-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $dark-primary,
+    accent: $dark-accent,
+    warn: $dark-warn,
+  ),
+));
+
+.darkMode {
+  @include mat.all-component-colors($corona-statistics-dark-theme);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
