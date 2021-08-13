@@ -95,7 +95,6 @@ export class DashboardComponent implements OnInit {
 
   applyStateChanged(state: State) {
     this._selectedState = state;
-    this._filterNotifierService.notifyStateChanged(state.abbreviation);
     this.refreshSimpleCards();
   }
 
@@ -116,6 +115,7 @@ export class DashboardComponent implements OnInit {
   }
 
   private refreshSimpleCards() {
+    this._filterNotifierService.notifyStateChanged(this._selectedState.abbreviation);
     this._statisticsService.fetchSummary(this._selectedState.abbreviation)
     .subscribe(summary => {
       this._cardWeekIncidence.value = summary.weekIncidence;
